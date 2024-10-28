@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.82);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    background-color: rgb(33, 32, 32);
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 220px;
+}
+
+li {
+    margin-left: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.page {
+    margin-left: 250px;
+}
+
+.part {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/free-photo/fresh-coffee-steams-wooden-table-close-up-generative-ai_188544-8923.jpg");
+    background-position: center;
+    margin-top: 85px;
+    color: white;
+    padding-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.part button {
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: #C99E71;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.part button:hover {
+    background-color: white;
+    color: #C99E71;
+    border: 1px solid #C99E71;
+}
+
+.part2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 200px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.part2 div {
+    text-align: center;
+    max-width: 30%;
+    flex: 1;
+}
+
+.p1 img, .p2 img, .p3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Hover animations for images */
+.p1 img, .p2 img, .p3 img, 
+.part3 div img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p1 img:hover, .p2 img:hover, .p3 img:hover, 
+.part3 div img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); /* Adds a shadow */
+}
+
+.part3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 200px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Stack the first two images vertically */
+.a1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.a1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Make the third image and the button appear side by side */
+.a2, .a3 {
+    flex: 1;
+    max-width: 48%; /* Controls the width of the image and button container */
+}
+
+.a2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.a3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    padding: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    max-width: 100%; /* Make sure the button takes full width */
+}
+
+.history-btn:hover {
+    color: #C99E71;
+    transform: translateY(-5px);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .part {
+        padding-left: 50px;
+        text-align: center;
+    }
+
+    .part2 {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .part2 div {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .part3 {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .a1, .a2, .a3 {
+        max-width: 100%; /* Stack them vertically on smaller screens */
+    }
+
+    .a1 img, .a2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .history-btn {
+        padding: 20px;
+    }
+}
+.part4{
+    text-align: center;
+}
+.part4 img{
+    width: 35%;
+    height: 30%;
+}
+.navbar ul li a.active {
+    color: #C99E71; /* Highlight the active section link */
+    font-weight: bold;
+}
+
+.sticky {
+    background-color: rgba(33, 32, 32, 0.9); /* Navbar becomes slightly transparent on scroll */
+    transition: background-color 0.3s;
+}
+.part4{
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
